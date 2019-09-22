@@ -1,0 +1,234 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  left: 0;
+  width: 34%;
+  margin: auto;
+  background: #00B2FF;
+  z-index: 10;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+
+  h2 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+    margin: 0;
+    color: #FFFFFF;
+    padding-bottom: 7px;
+    padding-left: 38px;
+    padding-top: 33px;
+  }
+
+  p {
+    font-family: PT Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    color: #FFFFFF;
+    padding-left: 38px;
+    margin-bottom: 35px;
+    width: 75%;
+  }
+
+  .modal__form {
+    .modal__form--letter {
+      margin: 26px 0 20px;
+
+      input {
+        display: block;
+        width: 79%;
+        margin: auto;
+        padding: 16px 0 16px 25px;
+        background: rgba(255,255,255,.1);
+        border: none;
+        margin-bottom: 30px;
+        
+        &::placeholder {
+          font-family: PT Mono;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .modal__form--box {
+      display: block;
+      width: 79%;
+      margin: auto;
+      min-height: 75px;
+      background: rgba(255, 255, 255, .1);
+      border: none;
+      padding: 16px 0 16px 25px;
+
+      &::placeholder {
+        font-family: PT Mono;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+      }
+    }
+
+    .modal__check {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      justify-content: space-between;
+      width: 100%;
+      flex-direction: column;
+
+      .modal__bottom {
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background: #00B2FF;
+        color: #FFFFFF;
+        padding: 15px;
+        width: 84%;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+
+      .modal__item {
+        width: 64%;
+        margin: auto;
+        padding-bottom: 36px;
+      
+        label {
+          position: relative;
+          font-family: PT Mono;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+          opacity: 0.8; 
+        }
+      }
+
+    .modal__input+label::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -50px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #FFFFFF;
+        cursor: pointer;
+      }
+
+      .modal__input:checked+label::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: -45px;
+        width: 10px;
+        height: 7px;
+        background-image: url(../img/check.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .modal__close {
+    svg {
+      position: absolute;
+      top: 16px;
+      right: 28px;
+    }
+  }
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(-2000px);
+  }
+  
+  70% {
+      transform: translateY(30px);
+  }
+  
+  90% {
+      transform: translateY(-10px);
+  }
+  
+  100% {
+      transform: translateY(0);
+    }
+  }
+  
+@keyframes shake {
+0%,
+100% {
+    transform: translateX(0);
+}
+
+10%,
+30%,
+50%,
+70%,
+90% {
+    transform: translateX(-10px);
+}
+
+20%,
+40%,
+60%,
+80% {
+    transform: translateX(10px);
+  }
+}
+
+.overlay-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+@media (max-width: 1023px) {
+  .modal {
+    width: 50%;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    width: 100%;
+    top: 0;
+  }
+}

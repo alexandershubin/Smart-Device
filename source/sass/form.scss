@@ -1,0 +1,284 @@
+.form {
+  background: #00B2FF;
+  padding-bottom: 25px;
+
+  .form__content {
+    display: flex;
+    max-width: 1215px;
+    width: 100%;
+    margin: auto;
+
+    .form__image {
+      position: relative;
+      width: 49%;
+
+      img {
+        position: relative;
+        top: -60px;
+        left: -200px;
+        min-width: 686px;
+      }
+    }
+
+    .form__wrp {
+      width: 47%;
+      padding-top: 93px;
+
+      h2 {
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 51px;
+        margin: 0;
+        color: #FFFFFF;
+        padding-bottom: 7px;
+      }
+
+      p {
+        font-family: PT Mono;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0;
+        color: #FFFFFF;
+      }
+
+      .form__login {
+
+
+        .form__letter {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 26px 0 20px;
+
+          input {
+            padding: 15px 47px 15px 20px;
+            background: rgba(255,255,255,.1);
+            border: none;
+            width: 36%;
+            &::placeholder {
+              font-family: PT Mono;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 22px;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        .form__login--box {
+          width: 97%;
+          min-height: 147px;
+          background: rgba(255, 255, 255, .1);
+          border: none;
+          padding: 13px 0 0 20px;
+
+          &::placeholder {
+            font-family: PT Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+          }
+        }
+
+        .form__check {
+          display: flex;
+          align-items: center;
+          margin-top: 37px;
+          justify-content: space-between;
+          width: 100%;
+
+          .form__bottom {
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: #00B2FF;
+            color: #FFFFFF;
+            padding: 15px;
+            width: 48%;
+          }
+
+          .form__item {
+            width: 40%;
+          
+            label {
+              position: relative;
+              font-family: PT Mono;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 16px;
+              color: #FFFFFF;
+              opacity: 0.8; 
+            }
+          }
+
+        .form__input+label::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: -32px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #FFFFFF;
+            cursor: pointer;
+          }
+
+          .form__input:checked+label::after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: -27px;
+            width: 10px;
+            height: 7px;
+            background-image: url(../img/check.svg);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .form {
+    padding-bottom: 102px;
+  
+    .form__content {
+      width: 78%;
+  
+      .form__image {
+        display: none;
+      }
+
+      .form__wrp {
+        width: 99%;
+        padding-top: 80px;
+
+        h2 {
+          font-size: 32px;
+          line-height: 45px;
+          padding-bottom: 15px;
+        }
+
+        p {
+          padding-left: 3px;
+        }
+
+        .form__login {
+
+          .form__letter {
+            margin-bottom: 20px;
+          }
+  
+          .form__letter--user {
+            width: 34%;
+            margin-right: 0;
+            padding: 16px 62px 20px 17px;
+          }
+
+
+          .form__letter--password {
+            margin-right: 0px;
+            width: 34%;
+            padding: 16px 62px 20px 17px;
+          }
+
+          .form__check {
+            margin-top: 41px;
+  
+            .form__bottom {
+              width: 47%;
+            }
+  
+            .form__item {
+              width: 41%;
+            }
+  
+          .form__input+label::before {
+              content: '';
+              position: absolute;
+              top: 2px;
+              left: -32px;
+              width: 16px;
+              height: 16px;
+              border: 1px solid #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .form {
+    padding-bottom: 42px;
+
+    .form__content {
+      width: 91%;
+
+      .form__wrp {
+        padding-top: 30px;
+
+        h2 {
+          font-size: 28px;
+          line-height: 39px;
+        }
+
+        .form__login {
+          .form__letter {
+            flex-direction: column;
+            margin: 11px 0 15px;
+
+            input {
+              width: 93%;
+              margin: 11px 0 15px;
+              padding: 13px 0 13px 20px;
+            }
+          }
+
+          .form__login--box {
+            min-height: 93px;
+            width: 93%;
+            min-width: 105px;
+            margin: auto;
+            display: block;
+          }
+
+          .form__check {
+            flex-direction: column;
+            margin-top: 30px;
+  
+            .form__bottom {
+              width: 100%;
+              padding: 14px;
+              margin-bottom: 28px;
+            }
+  
+            .form__item {
+              width: 76%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

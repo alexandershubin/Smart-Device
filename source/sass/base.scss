@@ -1,0 +1,95 @@
+body {
+  font-family: "PT Mono", monospace;
+  font-size: 16px;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: $body-background;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.block-content {
+  max-width: 1215px;
+  margin: auto;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.toggle-plus {
+  position: absolute;
+  top: 25px;
+  right: 17px;
+  width: 20px;
+  height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    width: 1px;
+    height: 16px;
+    background: #C4C4C4;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    width: 16px;
+    height: 1px;
+    background: #C4C4C4;
+  }
+}
+
+.toggle-minus {
+  position: absolute;
+  top: 25px;
+  right: 17px;
+  width: 20px;
+  height: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    width: 16px;
+    height: 1px;
+    background: #C4C4C4;
+  }
+}
