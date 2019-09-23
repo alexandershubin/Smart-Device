@@ -99,6 +99,10 @@
     margin: 0;
     color: #666666;
     padding-bottom: 20px;
+
+    .about-company__hidden-text {
+      display: none;
+    }
   }
 
   .about__button {
@@ -169,14 +173,16 @@
   .about__company {
     margin: 21px 7px;
 
-    .about__discription {
-      display: none;
-    }
+    p {
 
-    .about__discription2 {
-      display: block;
+      .about-company__all-text {
+        display: none;
+      }
+      
+      .about-company__hidden-text {
+        display: inline;
+      }
     }
-
     .about__button {
       margin-top: 22px;
     }
