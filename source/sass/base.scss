@@ -48,48 +48,50 @@ a:hover {
   opacity: 0.5;
 }
 
-.toggle-plus {
-  position: absolute;
-  top: 25px;
-  right: 17px;
-  width: 20px;
-  height: 20px;
-
-  &::before {
-    content: "";
+@media (max-width: 767px){
+  .toggle-plus {
     position: absolute;
-    top: 2px;
-    right: 10px;
-    width: 1px;
-    height: 16px;
-    background: #C4C4C4;
+    top: 25px;
+    right: 17px;
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 10px;
+      width: 1px;
+      height: 16px;
+      background: #C4C4C4;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 3px;
+      width: 16px;
+      height: 1px;
+      background: #C4C4C4;
+    }
   }
 
-  &::after {
-    content: "";
+  .toggle-minus {
     position: absolute;
-    top: 10px;
-    right: 3px;
-    width: 16px;
-    height: 1px;
-    background: #C4C4C4;
-  }
-}
+    top: 25px;
+    right: 17px;
+    width: 20px;
+    height: 20px;
 
-.toggle-minus {
-  position: absolute;
-  top: 25px;
-  right: 17px;
-  width: 20px;
-  height: 20px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 3px;
-    width: 16px;
-    height: 1px;
-    background: #C4C4C4;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 3px;
+      width: 16px;
+      height: 1px;
+      background: #C4C4C4;
+    }
   }
 }

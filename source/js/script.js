@@ -1,16 +1,14 @@
 var link = document.querySelector(".header__right--button");
 var popup = document.querySelector(".modal");
 var close = popup.querySelector(".modal__close");
-var login = document.querySelector("[name=name]");
-var phone = document.querySelector("[name=phone]");
-var form = document.querySelector("form");
+var login = popup.querySelector("[name=login]");
+var phone = popup.querySelector("[name=phone]");
+var form = popup.querySelector("form");
 var overlay = document.querySelector(".overlay");
 var toggle = document.querySelector(".toggle");
 var toggleOffice = document.querySelector(".toggle-button");
 var list = document.querySelector(".part__list");
 var listOffice = document.querySelector(".office__list");
-
-
 
 
 var isStorageSupport = true;
@@ -27,10 +25,10 @@ link.addEventListener("click", function(evt) {
   popup.classList.add("modal-show");
   overlay.classList.add("overlay-modal");
   if (storage) {
-    login.value = storage;
+   login.value = storage;
     phone.focus();
   } else {
-    login.focus();
+   login.focus();
   }
 });
 

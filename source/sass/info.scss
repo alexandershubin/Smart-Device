@@ -115,20 +115,23 @@
     .office {
       width: 37%;
       padding: 18px 0;
+      .office__header {
+        position: relative;
 
-      h3 {
-        font-family: Roboto Condensed;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
-        line-height: 16px;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin: 0;
-        padding-bottom: 25px;
-        color: #1B2D37;
+        h3 {
+          font-family: Roboto Condensed;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          margin: 0;
+          padding-bottom: 25px;
+          color: #1B2D37;
+        }
       }
 
       .office__list {

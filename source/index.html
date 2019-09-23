@@ -33,7 +33,7 @@
             <a href="tel:+7(495)0005252" class="header__right-discription2">+7 (495) 000 52 52</a>
           </div>
 
-          <a class="header__right header__right--button button">Заказать звонок</a>
+          <button class="header__right header__right--button button">Заказать звонок</button>
         </div>
       </div>
       <div class="header-main">
@@ -215,13 +215,13 @@
       <div class="form__wrp">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="form__login" action="#" method="POST" id="order-form">
+        <form class="form__login" action="" method="GET" id="order-form">
           <div class="form__letter">
-            <label class="visually-hidden" for="login">Логин</label>
-            <input id="login" type="text" name="login" placeholder="Имя">
+            <label class="visually-hidden" for="user-name">Имя</label>
+            <input id="user-name" type="text" name="user-name" placeholder="Имя">
 
             <label class="visually-hidden" for="tel">Телефон</label>
-            <input id="tel" type="tel" name="tel" placeholder="Телефон">
+            <input id="tel" type="text" name="tel" placeholder="Телефон">
           </div>
 
           <textarea class="form__login form__login--box" name="text" id="text-letter"
@@ -333,13 +333,13 @@
   <section class="modal">
     <h2>Закажите звонок</h2>
     <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <form class="modal__form" action="#" method="POST">
+    <form class="modal__form" action="" method="GET">
       <div class="modal__form modal__form--letter">
-        <label class="visually-hidden" for="user-login">Логин</label>
-        <input id="user-login" type="text" name="name" placeholder="Имя">
+        <label class="visually-hidden" for="login">Имя</label>
+        <input id="login" type="text" name="login" placeholder="Имя">
 
         <label class="visually-hidden" for="phone">Телефон</label>
-        <input id="phone" type="tel" name="phone" placeholder="Телефон">
+        <input id="phone" type="text" name="phone" placeholder="Телефон">
       </div>
 
       <textarea class="modal__form modal__form--box" name="text-letter" id="text-letter-field"
