@@ -130,83 +130,45 @@ toggleOffice.addEventListener("click", function(evt) {
   }
 });
 
-// form
-function mask(text, mask, evt) {
-try {
-  var text = document.getElementById("number");
-  var value = text.value;
 
-  // If user pressed DEL or BACK SPACE, clean the value
-  try {
-    var e = (evt.which) ? evt.which : event.keyCode;
-    if ( e == 46 || e == 8 ) {
-      text.value = "";
-      return;
+// modal form
+  window.addEventListener("DOMContentLoaded", function() {
+    function setCursorPosition(pos, elem) {
+        elem.focus();
+        if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+        else if (elem.createTextRange) {
+            var range = elem.createTextRange();
+            range.collapse(true);
+            range.moveEnd("character", pos);
+            range.moveStart("character", pos);
+            range.select();
+        }
     }
-  } catch (e1) {}
+  
+    function mask(event) {
+        var matrix = "+7 (___) ___ ____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+        if (def.length >= val.length) val = def;
+        this.value = matrix.replace(/./g, function(a) {
+            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+        });
+        if (event.type == "blur") {
+            if (this.value.length == 2) this.value = "";
+        } else setCursorPosition(this.value.length, this);
+    };
 
-  var literalPattern=/[0\*]/;
-  var numberPattern=/[0-9]/;
-  var newValue = "";
-
-  for (var vId = 0, mId = 0 ; mId < mask.length ; ) {
-    if (mId >= value.length)
-      break;
-
-    // Number expected but got a different value, store only the valid portion
-    if (mask[mId] == '0' && value[vId].match(numberPattern) == null) {
-      break;
-    }
-
-    // Found a literal
-    while (mask[mId].match(literalPattern) == null) {
-      if (value[vId] == mask[mId])
-        break;
-
-    newValue += mask[mId++];
-  }
-
-  newValue += value[vId++];
-  mId++;
-}
-
-text.value = newValue;
-  } catch(e) {}
-}
-
-// // modal form
-window.addEventListener("DOMContentLoaded", function() {
-  function setCursorPosition(pos, elem) {
-      elem.focus();
-      if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
-      else if (elem.createTextRange) {
-          var range = elem.createTextRange();
-          range.collapse(true);
-          range.moveEnd("character", pos);
-          range.moveStart("character", pos);
-          range.select();
-      }
-  }
-
-  function mask(event) {
-      var matrix = "+7 (___) ___ ____",
-          i = 0,
-          def = matrix.replace(/\D/g, ""),
-          val = this.value.replace(/\D/g, "");
-      if (def.length >= val.length) val = def;
-      this.value = matrix.replace(/./g, function(a) {
-          return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
-      });
-      if (event.type == "blur") {
-          if (this.value.length == 2) this.value = "";
-      } else setCursorPosition(this.value.length, this);
-  };
+    var number = document.getElementById("number");
+    number.addEventListener("input", mask, false);
+    number.addEventListener("focus", mask, false);
+    number.addEventListener("blur", mask, false);
 
     var input = document.getElementById("phone");
     input.addEventListener("input", mask, false);
     input.addEventListener("focus", mask, false);
     input.addEventListener("blur", mask, false);
-});
+  });
 
 // scroll
 var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
