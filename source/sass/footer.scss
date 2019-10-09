@@ -7,7 +7,7 @@
   .footer__wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 1460px;
+    max-width: 1418px;
     width: 95%;
     margin: auto;
     padding: 0px 0;
@@ -25,7 +25,7 @@
     }
 
     .footer__left {
-      width: 41%;
+      width: 43%;
       display: flex;
       align-items: center;
 
@@ -54,7 +54,7 @@
       }
 
       .footer__right--second {
-        width: 35%;
+        width: 25%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -70,6 +70,8 @@
 @media (max-width: 1023px) {
   .footer {
     .footer__wrap {
+      width: 93%;
+      padding-top: 9px;
       .footer__left {
         display: none;
       }
@@ -94,7 +96,7 @@
 
       .footer__right {
         flex-direction: column;
-        padding: 13px 0 10px;
+        padding: 10px 0 10px;
 
         .footer__right--second {
           margin: 0;

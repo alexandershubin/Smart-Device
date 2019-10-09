@@ -15,7 +15,7 @@
       img {
         position: relative;
         top: -60px;
-        left: -200px;
+        left: -177px;
         min-width: 686px;
       }
     }
@@ -23,6 +23,7 @@
     .form__wrp {
       width: 47%;
       padding-top: 93px;
+      margin-left: 25px;
 
       h2 {
         font-family: Roboto Condensed;
@@ -43,6 +44,7 @@
         line-height: 22px;
         margin: 0;
         color: #FFFFFF;
+        margin-bottom: 50px;
       }
 
       .form__login {
@@ -53,7 +55,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin: 26px 0 20px;
+          margin: 26px 0 40px;
 
           input {
             padding: 15px 47px 15px 20px;
@@ -92,7 +94,7 @@
         .form__check {
           display: flex;
           align-items: center;
-          margin-top: 37px;
+          margin-top: 34px;
           justify-content: space-between;
           width: 100%;
 
@@ -172,6 +174,15 @@
       .form__wrp {
         width: 99%;
         padding-top: 80px;
+        margin-left: 0;
+
+        .form__login {
+          margin-left: 7px;
+
+          .form__login--box {
+            margin-left: 0px;
+          }
+        }
 
         h2 {
           font-size: 32px;
@@ -181,12 +192,13 @@
 
         p {
           padding-left: 3px;
+          margin-bottom: 53px;
         }
 
         .form__login {
 
           .form__letter {
-            margin-bottom: 20px;
+            margin-bottom: 46px;
           }
   
           .form__letter--user {
@@ -244,15 +256,20 @@
           line-height: 39px;
         }
 
+        p {
+          margin-bottom: 14px;
+        }
+
         .form__login {
+          margin-left: 0;
           .form__letter {
             flex-direction: column;
             margin: 11px 0 15px;
 
             input {
               width: 93%;
-              margin: 11px 0 15px;
-              padding: 13px 0 13px 20px;
+              margin: 11px 0 20px;
+              padding: 16px 0 16px 20px;
             }
           }
 
@@ -262,6 +279,7 @@
             min-width: 105px;
             margin: auto;
             display: block;
+            padding: 9px 0 0 18px;
           }
 
           .form__check {

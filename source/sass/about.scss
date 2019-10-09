@@ -6,7 +6,7 @@
 }
 
 .about__list {
-  width: 100%;
+  width: 99%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +19,7 @@
   background: #fff;
   border: 1px solid #ebebeb;
   box-sizing: border-box;
-  padding: 40px 36px 65px 42px;
+  padding: 41px 36px 65px 39px;
   border-left: 3px solid #00b2ff;
   margin-bottom: 30px;
   min-height: 299px;
@@ -65,7 +65,7 @@
 }
 
 .about__company {
-  width: 95%;
+  width: 98%;
   margin:  0 auto;
   position: relative;
   display: flex;
@@ -76,7 +76,7 @@
     width: 218px;
     height: 314px;
     margin-top: 10px;
-    margin-left: -28px;
+    margin-left: -7px;
   }
 
   h3 {
@@ -127,7 +127,8 @@
   }
 
   .about__wrp {
-    margin-left: -10px;
+    margin-left: -9px;
+    margin-top: -5px;
   }
 }
 
@@ -172,6 +173,11 @@
   .about__company {
     margin: 21px 7px;
 
+    .about__wrp {
+      margin-left: -6px;
+      margin-top: 7px;
+    }
+
     p {
       .about__text {
         display: none;
@@ -182,7 +188,7 @@
       }
     }
     .about__button {
-      margin-top: 22px;
+      margin-top: 0;
     }
   }
 
@@ -229,6 +235,13 @@
     padding: 24px 0px 25px 24px;
   }
 
+  .about__item:nth-child(3) {
+    padding: 28px 24px 16px;
+    h3 {
+      padding: 0px 5px 0px;
+    }
+  }
+
   .about__company {
     width: 90%;
     margin:  0 auto;
@@ -244,6 +257,7 @@
     h3 {
       font-size: 28px;
       line-height: 39px;
+      padding-bottom: 17px;
     }
 
     p {
