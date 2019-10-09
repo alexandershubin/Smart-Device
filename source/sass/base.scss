@@ -56,6 +56,10 @@ label {
   opacity: 0.5;
 }
 
+.modal__item:hover {
+  opacity: 0.5;
+}
+
 @media (max-width: 767px){
   .toggle-plus {
     position: absolute;

@@ -4,7 +4,7 @@
   top: 10%;
   right: 0;
   left: 0;
-  width: 34%;
+  width: 26%;
   margin: auto;
   background: #00B2FF;
   z-index: 10;
@@ -68,6 +68,7 @@
       background: rgba(255, 255, 255, .1);
       border: none;
       padding: 16px 0 16px 25px;
+      resize: none;
 
       &::placeholder {
         font-family: PT Mono;

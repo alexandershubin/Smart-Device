@@ -184,7 +184,7 @@ window.addEventListener("DOMContentLoaded", function() {
           range.collapse(true);
           range.moveEnd("character", pos);
           range.moveStart("character", pos);
-          range.select()
+          range.select();
       }
   }
 
@@ -198,8 +198,8 @@ window.addEventListener("DOMContentLoaded", function() {
           return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
       });
       if (event.type == "blur") {
-          if (this.value.length == 2) this.value = ""
-      } else setCursorPosition(this.value.length, this)
+          if (this.value.length == 2) this.value = "";
+      } else setCursorPosition(this.value.length, this);
   };
 
     var input = document.getElementById("phone");
