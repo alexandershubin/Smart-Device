@@ -91,23 +91,17 @@
         flex-direction: column;
         flex-wrap: wrap;
         height: 101px;
-        
+        font-family: PT Mono;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        opacity: 0.5;
+        margin-right: 15px;
 
         .part__item a {
-          font-family: PT Mono;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 15px;
-          line-height: 25px;
           color: #1B2D37;
-          opacity: 0.5;
-          margin-right: 15px;
           text-decoration: none;
-
-          &:hover {
-            opacity: 1;
-            color: #000000;
-          }
         }
       }
     }
@@ -117,6 +111,7 @@
       padding: 18px 0;
       .office__header {
         position: relative;
+        z-index: 10;
 
         h3 {
           font-family: Roboto Condensed;
@@ -131,6 +126,8 @@
           margin: 0;
           padding-bottom: 25px;
           color: #1B2D37;
+          position: relative;
+          z-index: -1;
         }
       }
 
@@ -152,6 +149,10 @@
       }
     }
   }
+}
+
+.list-toggle.active {
+  display: block;
 }
 
 
@@ -242,12 +243,14 @@
 
         .part__header {
           position: relative;
+          z-index: 10;
 
           h3 {
             width: 90%;
             margin: auto;
             padding-top: 30px;
             padding-bottom: 27px;
+            z-index: -1;
           }
         }
 
@@ -266,11 +269,13 @@
 
         .office__header {
           position: relative;
+          z-index: 10;
           h3 {
             width: 90%;
             margin: auto;
             padding-top: 30px;
             padding-bottom: 27px;
+            z-index: -1;
           }
         }
 
@@ -284,3 +289,4 @@
     }
   }
  }
+

@@ -124,6 +124,7 @@
 
 
   .header-main__left {
+    position: relative;
     width: 50%;
 }
 
@@ -195,8 +196,37 @@
   display: none;
 }
 
-@media (max-width: 1023px) {
+.header-main__scroll {
+  position: absolute;
+  bottom: -120px;
+  left: -30px;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  padding: 10px;
+  transform: rotate(-90deg);
+  width: 100px;
+  text-decoration: none;
+  cursor: pointer;
+}
 
+@media(max-width: 1200px) {
+  .header-main__scroll {
+    bottom: -85px;
+  }
+}
+
+@media(max-width: 1085px) {
+  .header-main__scroll {
+    bottom: -55px;
+  }
+}
+
+@media (max-width: 1023px) {
   .header {
     padding-bottom: 83px;
     .header__right--button {
@@ -284,6 +314,10 @@
     margin-top: 55px;
     display: block;
     text-decoration: none;
+  }
+
+  .header-main__scroll {
+    display: none;
   }
 }
 

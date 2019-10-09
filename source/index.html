@@ -45,6 +45,7 @@
 
           </div>
           <a href="#order-form" class="header-main__button2">Бесплатная консультация</a>
+          <a href="#about" class="header-main__scroll">Скролл вниз</a>
         </div>
         <div class="header-main__right">
           <picture>
@@ -57,7 +58,7 @@
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2 class="visually-hidden">about us</h2>
     <div class="block-content">
       <ul class="about__list">
@@ -164,8 +165,8 @@
           <p class="">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
             HOLGLITRONIC, REFOND.
             Печатные
-            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about-company__hidden-text">...</span>
-              <span class="about-company__all-text">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__hidden">...</span>
+              <span class="about__text">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
                 наших клиентов крупнейшие
                 Производители светотехники России.</span>
           </p>
@@ -202,7 +203,7 @@
     </div>
   </section>
 
-  <section class="form">
+  <section class="form" id="order-form">
     <h2 class="visually-hidden">order</h2>
     <div class="form__content">
       <div class="form__image">
@@ -211,13 +212,13 @@
       <div class="form__wrp">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="form__login" action="#" method="GET" id="order-form">
+        <form class="form__login" action="#" method="GET">
           <div class="form__letter">
             <label class="visually-hidden" for="name">Имя</label>
             <input id="name" type="text" name="name" placeholder="Имя" required>
     
             <label class="visually-hidden" for="number">Телефон</label>
-            <input id="number" type="text" name="number" placeholder="Телефон" required>
+            <input id="number" type="text" name="number" placeholder="Телефон" onkeyup="javascript:mask('zipCode', '+7(000)000-00-00', event);" required>
           </div>
 
           <textarea class="form__login form__login--box" name="text" id="text-letter"
@@ -252,7 +253,7 @@
             <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M27 13.5C27 6.04462 20.9562 0 13.5 0C6.04379 0 0 6.04462 0 13.5C0 20.9562 6.04369 27 13.5 27C20.9562 27 27 20.9563 27 13.5ZM16.8835 9.29395H15.1437C14.6754 9.29395 14.3464 9.69053 14.3464 10.185V10.9604H16.8312L16.4288 13.4772H14.3455V20.2238H11.8025V13.4772H10.115V10.9604H11.8025V9.677H11.8075C11.8523 8.21392 12.3602 6.82092 14.8383 6.73315V6.72388H16.8835V9.29395Z"
-                fill="#CDCDCD" />
+                fill="#CDCDCD"/>
             </svg>
           </a>
         </li>

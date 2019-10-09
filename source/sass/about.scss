@@ -11,7 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: inherit;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 .about__item {
@@ -22,7 +22,6 @@
   padding: 40px 36px 65px 42px;
   border-left: 3px solid #00b2ff;
   margin-bottom: 30px;
-  margin-right: 30px;
   min-height: 299px;
 
   h3 {
@@ -100,7 +99,7 @@
     color: #666666;
     padding-bottom: 20px;
 
-    .about-company__hidden-text {
+    .about__hidden {
       display: none;
     }
   }
@@ -174,12 +173,11 @@
     margin: 21px 7px;
 
     p {
-
-      .about-company__all-text {
+      .about__text {
         display: none;
       }
       
-      .about-company__hidden-text {
+      .about__hidden {
         display: inline;
       }
     }

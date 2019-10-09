@@ -45,6 +45,7 @@
 
           </div>
           <a href="#order-form" class="header-main__button2">Бесплатная консультация</a>
+          <a href="#about" class="header-main__scroll">Скролл вниз</a>
         </div>
         <div class="header-main__right">
           <picture>
@@ -57,7 +58,7 @@
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2 class="visually-hidden">about us</h2>
     <div class="block-content">
       <ul class="about__list">
@@ -124,8 +125,8 @@
           <p class="">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
             HOLGLITRONIC, REFOND.
             Печатные
-            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about-company__hidden-text">...</span>
-              <span class="about-company__all-text">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about__hidden">...</span>
+              <span class="about__text">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди
                 наших клиентов крупнейшие
                 Производители светотехники России.</span>
           </p>
@@ -162,7 +163,7 @@
     </div>
   </section>
 
-  <section class="form">
+  <section class="form" id="order-form">
     <h2 class="visually-hidden">order</h2>
     <div class="form__content">
       <div class="form__image">
@@ -171,13 +172,13 @@
       <div class="form__wrp">
         <h2>Остались вопросы? Задайте их нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="form__login" action="#" method="GET" id="order-form">
+        <form class="form__login" action="#" method="GET">
           <div class="form__letter">
             <label class="visually-hidden" for="name">Имя</label>
             <input id="name" type="text" name="name" placeholder="Имя" required="">
     
             <label class="visually-hidden" for="number">Телефон</label>
-            <input id="number" type="text" name="number" placeholder="Телефон" required="">
+            <input id="number" type="text" name="number" placeholder="Телефон" onkeyup="javascript:mask('zipCode', '+7(000)000-00-00', event);" required="">
           </div>
 
           <textarea class="form__login form__login--box" name="text" id="text-letter" placeholder="Ваш вопрос"></textarea>

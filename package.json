@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "del": "^4.1.1",
+    "imask": "^5.2.1",
     "normalize.scss": "^0.1.0"
   }
 }
