@@ -16,11 +16,11 @@
 }
 
 .services__list {
-  width: 96%;
+  width: 99%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   li {
@@ -35,7 +35,7 @@
   width: 31%;
   min-height: 620px;
   max-width: 370px;
-  margin-bottom: 30px;
+  margin: 0 15px 30px;
 
   &::before {
     content: url('../img/Vector.svg');
