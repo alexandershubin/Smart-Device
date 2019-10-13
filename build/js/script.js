@@ -1,5 +1,5 @@
 
-var link = document.querySelector(".header__right--button");
+var link = document.querySelector(".header__right-button");
 var popup = document.querySelector(".modal");
 var formPage = document.querySelector(".form__login");
 var close = popup.querySelector(".modal__close");
