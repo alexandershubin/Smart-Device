@@ -67,6 +67,16 @@
   }
 }
 
+@media (max-width: 1395px) {
+  .footer .footer__wrap .footer__right .footer__right--second {
+    width: 38%;
+  }
+
+  .footer .footer__wrap .footer__left {
+    width: 50%;
+  }
+}
+
 @media (max-width: 1023px) {
   .footer {
     .footer__wrap {
